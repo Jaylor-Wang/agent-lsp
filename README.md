@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@jaylor-wang/agent-lsp.svg)](https://www.npmjs.com/package/@jaylor-wang/agent-lsp)
 [![license](https://img.shields.io/github/license/Jaylor-Wang/agent-lsp.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/Jaylor-Wang/agent-lsp.svg)](https://github.com/Jaylor-Wang/agent-lsp/releases)
+[![GitHub release](https://img.shields.io/github/v/release/Jaylor-Wang/agent-lsp?color=blue&label=release)](https://github.com/Jaylor-Wang/agent-lsp/releases)
 [![node version](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-blue.svg)](package.json)
 
