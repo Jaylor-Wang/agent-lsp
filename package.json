@@ -4,8 +4,8 @@
   "description": "Lightweight, zero-dependency, config-driven LSP client and compiler diagnostics CLI for AI coding agents and terminal workflows",
   "main": "src/lsp-cli.js",
   "bin": {
-    "lsp": "./bin/lsp.js",
-    "agent-lsp": "./bin/lsp.js"
+    "lsp": "bin/lsp.js",
+    "agent-lsp": "bin/lsp.js"
   },
   "scripts": {
     "test": "node bin/lsp.js servers",

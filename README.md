@@ -1,5 +1,6 @@
 # agent-lsp
 
+[![npm version](https://img.shields.io/npm/v/@jaylor-wang/agent-lsp.svg)](https://www.npmjs.com/package/@jaylor-wang/agent-lsp)
 [![license](https://img.shields.io/github/license/Jaylor-Wang/agent-lsp.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/Jaylor-Wang/agent-lsp.svg)](https://github.com/Jaylor-Wang/agent-lsp/releases)
 [![node version](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
@@ -40,14 +41,21 @@
 
 ## 📦 Installation & Setup
 
-### Option 1: Install directly from GitHub (Zero build step, immediate use)
+### Option 1: Global Installation via NPM / PNPM (Official Registry)
+```bash
+npm install -g @jaylor-wang/agent-lsp
+# or
+pnpm add -g @jaylor-wang/agent-lsp
+```
+
+### Option 2: Install directly from GitHub (Zero build step)
 ```bash
 npm install -g github:Jaylor-Wang/agent-lsp
 # or
 pnpm add -g github:Jaylor-Wang/agent-lsp
 ```
 
-### Option 2: Clone & Link for Local Development
+### Option 3: Clone & Link for Local Development
 ```bash
 git clone https://github.com/Jaylor-Wang/agent-lsp.git
 cd agent-lsp
