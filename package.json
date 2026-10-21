@@ -1,0 +1,48 @@
+{
+  "name": "agent-lsp",
+  "version": "2.1.0",
+  "description": "Lightweight, zero-dependency, config-driven LSP client and compiler diagnostics CLI for AI coding agents and terminal workflows",
+  "main": "src/lsp-cli.js",
+  "bin": {
+    "lsp": "./bin/lsp.js",
+    "agent-lsp": "./bin/lsp.js"
+  },
+  "scripts": {
+    "test": "node bin/lsp.js servers",
+    "lint": "biome check src/ bin/"
+  },
+  "keywords": [
+    "lsp",
+    "language-server-protocol",
+    "ai-agent",
+    "coding-agent",
+    "diagnostics",
+    "vtsls",
+    "biome",
+    "rust-analyzer",
+    "ruff",
+    "dsh",
+    "omp"
+  ],
+  "author": "Jaylor-Wang (https://github.com/Jaylor-Wang)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaylor-Wang/agent-lsp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jaylor-Wang/agent-lsp/issues"
+  },
+  "homepage": "https://github.com/Jaylor-Wang/agent-lsp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin",
+    "src",
+    "config",
+    "skills",
+    "LICENSE",
+    "README.md"
+  ]
+}

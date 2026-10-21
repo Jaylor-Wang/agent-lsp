@@ -1,0 +1,128 @@
+{
+	"$comment": "LSP server registry for the `lsp` CLI. Schema follows omp's lsp.json (servers + rootMarkers + fileTypes + initOptions + settings + isLinter + disabled), plus `languageIds`, `timeouts` and `diagnostics` extensions.",
+	"servers": {
+		"typescript-native": {
+			"disabled": true
+		},
+		"biome": {
+			"command": "biome",
+			"args": ["lsp-proxy"],
+			"isLinter": true,
+			"fileTypes": [
+				".ts",
+				".tsx",
+				".mts",
+				".cts",
+				".js",
+				".jsx",
+				".mjs",
+				".cjs",
+				".json",
+				".jsonc",
+				".css"
+			],
+			"rootMarkers": [
+				"biome.json",
+				"biome.jsonc",
+				"package.json",
+				"tsconfig.json",
+				"jsconfig.json",
+				"vite.config.*",
+				"."
+			],
+			"readyTimeout": 8000,
+			"timeouts": { "initialize": 20000, "request": 10000 }
+		},
+		"vtsls": {
+			"command": "vtsls",
+			"args": ["--stdio"],
+			"fileTypes": [
+				".ts",
+				".tsx",
+				".mts",
+				".cts",
+				".js",
+				".jsx",
+				".mjs",
+				".cjs"
+			],
+			"rootMarkers": [
+				"tsconfig.json",
+				"jsconfig.json",
+				"package.json",
+				"vite.config.*",
+				"*.ts",
+				"*.tsx",
+				"*.js",
+				"*.jsx",
+				".git",
+				"."
+			],
+			"languageIds": { ".tsx": "typescriptreact", ".jsx": "javascriptreact" },
+			"initOptions": { "hostInfo": "dsh-lsp-cli" },
+			"settings": {
+				"typescript.tsserver.maxTsServerMemory": 3072,
+				"typescript.preferences.includePackageJsonAutoImports": "on",
+				"javascript.preferences.includePackageJsonAutoImports": "on",
+				"typescript.updateImportsOnFileMove.enabled": "always",
+				"javascript.updateImportsOnFileMove.enabled": "always",
+				"vtsls.autoUseWorkspaceTsdk": true
+			},
+			"readyTimeout": 8000,
+			"timeouts": { "initialize": 25000, "request": 15000 }
+		},
+		"rust-analyzer": {
+			"command": "rust-analyzer",
+			"fileTypes": [".rs"],
+			"rootMarkers": ["Cargo.toml", "*.rs", ".git", "."],
+			"readyTimeout": 20000,
+			"timeouts": { "initialize": 40000, "request": 30000 }
+		},
+		"ruff": {
+			"command": "ruff",
+			"args": ["server"],
+			"isLinter": true,
+			"fileTypes": [".py", ".pyi"],
+			"rootMarkers": ["ruff.toml", ".ruff.toml", "pyproject.toml", "*.py", ".git", "."],
+			"readyTimeout": 8000,
+			"timeouts": { "initialize": 15000, "request": 10000 }
+		},
+		"ty": {
+			"command": "ty",
+			"args": ["server"],
+			"fileTypes": [".py", ".pyi"],
+			"rootMarkers": [
+				"ty.toml",
+				"pyproject.toml",
+				"setup.py",
+				"setup.cfg",
+				"requirements.txt",
+				"Pipfile",
+				"*.py",
+				".git",
+				"."
+			],
+			"readyTimeout": 10000,
+			"timeouts": { "initialize": 20000, "request": 15000 }
+		}
+	},
+	"diagnostics": {
+		"typescript": {
+			"rootMarkers": ["tsconfig.json", "jsconfig.json", "tsconfig.*.json"],
+			"commands": [["tsc", "--noEmit"]],
+			"localBin": "tsc"
+		},
+		"biome": {
+			"rootMarkers": ["biome.json", "biome.jsonc"],
+			"commands": [["biome", "check", "."]]
+		},
+		"rust": {
+			"rootMarkers": ["Cargo.toml"],
+			"commands": [["cargo", "check", "--quiet"]]
+		},
+		"python": {
+			"rootMarkers": ["ruff.toml", ".ruff.toml", "pyproject.toml"],
+			"commands": [["ruff", "check", "."]]
+		}
+	}
+}
