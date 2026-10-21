@@ -1,5 +1,5 @@
 {
-  "name": "agent-lsp",
+  "name": "@jaylor-wang/agent-lsp",
   "version": "2.1.0",
   "description": "Lightweight, zero-dependency, config-driven LSP client and compiler diagnostics CLI for AI coding agents and terminal workflows",
   "main": "src/lsp-cli.js",

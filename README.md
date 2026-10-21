@@ -40,14 +40,14 @@
 
 ## 📦 Installation & Setup
 
-### Option 1: Global Installation via NPM / PNPM (Recommended)
+### Option 1: Install directly from GitHub (Zero build step, immediate use)
 ```bash
-npm install -g agent-lsp
+npm install -g github:Jaylor-Wang/agent-lsp
 # or
-pnpm add -g agent-lsp
+pnpm add -g github:Jaylor-Wang/agent-lsp
 ```
 
-### Option 2: Clone & Link for Development
+### Option 2: Clone & Link for Local Development
 ```bash
 git clone https://github.com/Jaylor-Wang/agent-lsp.git
 cd agent-lsp
